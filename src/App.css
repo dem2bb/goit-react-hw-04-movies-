@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav {
+  display: flex;
+  list-style: none;
+  padding-left: 20px;
+  border-bottom: 1px solid grey;
+  padding-bottom: 30px;
+  margin-top: 0;
+  padding-top: 10px;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.281);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.NavLink {
+  margin-right: 30px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.NavLink--active {
+  color: rgb(0, 4, 255);
+}
+
+.movie_cont {
+  margin-left: 30px;
+  display: flex;
+}
+
+.movie_cont__about {
+  margin-left: 20px;
+  width: 700px;
+}
+
+.movie_cont__genres {
+  display: flex;
+}
+
+.movie_cont__genres p {
+  margin-right: 15px;
+}
+
+.links {
+  margin-left: 20px;
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cast_img {
+  height: auto;
+  width: 80px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.review_text {
+  margin-left: 20px;
+}
+
+.button {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.button_back {
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+.notfound_text {
+  text-align: center;
+  margin-top: 400px;
 }
