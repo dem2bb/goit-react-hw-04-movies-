@@ -35,7 +35,6 @@ class MoviesPage extends Component {
         movies: [...films],
       })
     );
-    console.log(this.props.history);
   };
 
   render() {

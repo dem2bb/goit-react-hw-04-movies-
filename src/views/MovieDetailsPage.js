@@ -31,8 +31,8 @@ class MovieDetailsPage extends Component {
       })
     );
     this.setState({
-      from: this.props.location.state.from,
-      query: this.props.location.state.query,
+      from: this.props.location.state?.from,
+      query: this.props.location.state?.query,
     });
   }
 
@@ -40,7 +40,7 @@ class MovieDetailsPage extends Component {
     const { history } = this.props;
     this.state.query
       ? history.push({
-          pathname: this.state.from,
+          pathname: this.state?.from,
           search: `query=${this.state.query}`,
           query: this.state.query,
         })
