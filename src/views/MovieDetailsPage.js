@@ -11,6 +11,8 @@ class MovieDetailsPage extends Component {
     movie: {},
     casts: [],
     reviews: [],
+    from: "",
+    query: "",
   };
 
   componentDidMount() {
@@ -28,11 +30,21 @@ class MovieDetailsPage extends Component {
         reviews: [...review],
       })
     );
+    this.setState({
+      from: this.props.location.state.from,
+      query: this.props.location.state.query,
+    });
   }
 
   handleGoBack = () => {
-    const { location, history } = this.props;
-    history.push(location?.state?.from || routes.home);
+    const { history } = this.props;
+    this.state.query
+      ? history.push({
+          pathname: this.state.from,
+          search: `query=${this.state.query}`,
+          query: this.state.query,
+        })
+      : history.push("/");
   };
 
   render() {
