@@ -19,7 +19,7 @@ class HomePage extends Component {
     const { movies } = this.state;
     return (
       <>
-        <h1>Top tranding today</h1>
+        <h1>Top trending today</h1>
         <MovieList movies={movies} />
       </>
     );
